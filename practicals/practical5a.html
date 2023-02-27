@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/style5.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <a class="active" href="javascript:void(0)">Home</a>
+      <a href="javascript:void(0)">News</a>
+      <a href="javascript:void(0)">Contact</a>
+    </div>
+
+    <div class="content">
+      <div class="sticky">I am sticky!</div>
+      <h2>position: absolute;</h2>
+     <div class="relative-1">
+        This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+      </div>
+      <h2>position: relative;</h2>
+
+        <p>An element with position: relative; is positioned relative to its normal position:</p>
+
+        <div class="relative-2">
+        This div element has position: relative;
+        </div>
+        <h2>position: static;</h2>
+
+        <p>An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+
+        <div class="static">
+        This div element has position: static;
+        </div>
+        <h2>Image Text</h2>
+        <p>Add some text to an image in the bottom left corner:</p>
+        
+        <div class="container">
+          <img src="../images/cars.jpg" alt="Cinque Terre" width="1000" height="500">
+          <div class="bottomleft">Bottom Left</div>
+          <div class="topleft">Top Left</div>
+          <div class="topright">Top right</div>
+          <div class="bottomright">Bottom right</div>
+          <div class="center">Center</div>
+        </div>
+        </div>
+       
+
+     
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
